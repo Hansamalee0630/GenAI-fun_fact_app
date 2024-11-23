@@ -20,6 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const title = selectedFact.slice(0, colonIndex);
         const description = selectedFact.slice(colonIndex + 1).trim();
         
-        factDisplay.innerHTML = `<strong>${title}</strong><br>${description}`;
+        // Animate the fact display
+        factDisplay.classList.remove('updated');
+        setTimeout(() => {
+            factDisplay.innerHTML = `<strong>${title}</strong><br>${description}`;
+            factDisplay.classList.add('updated');
+        }, 100);
     });
 });
