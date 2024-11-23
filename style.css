@@ -59,7 +59,7 @@ h1 {
 
 /* When a new fact is generated */
 .fact-display.updated {
-    color: #333;
+    color: #3e2723;
     transform: scale(1.05);
 }
 
