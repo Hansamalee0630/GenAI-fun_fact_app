@@ -8,7 +8,7 @@ This project was developed as part of the GenAI 101 workshop and serves as a cap
 ### App : https://hansamalee0630.github.io/GenAI-fun_fact_app/
 
 <img src="FunFactApp.png">
-
+<img src="Generatefact.png">
 This is a Fun fact generating app using Pieces.
 
 ## Directory Structure
