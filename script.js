@@ -10,12 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
         "Cleopatra: Cleopatra was born in Egypt, but her family origins were in Macedonian Greece."
     ];
 
-
     const factDisplay = document.getElementById('fact-display');
     const generateFactButton = document.getElementById('generate-fact');
 
     generateFactButton.addEventListener('click', () => {
         const randomIndex = Math.floor(Math.random() * facts.length);
-        factDisplay.textContent = facts[randomIndex];
+        const selectedFact = facts[randomIndex];
+        const [title, description] = selectedFact.split(':');
+        
+        factDisplay.innerHTML = `<strong>${title}</strong><br>${description.trim()}`;
     });
 });
