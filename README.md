@@ -1,1 +1,1 @@
-# GenAI-fun_fact_app
+# Fun Fact App
