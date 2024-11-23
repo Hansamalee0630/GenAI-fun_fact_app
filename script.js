@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const facts = [
-        "Toothpaste: The oldest recipe for toothpaste is from ancient Egypt, and dates back to around 5000 BC. The Egyptians made a paste of abrasive substances like salt and sweet-smelling flowers to clean and freshen their teeth.",
+        "Toothpaste: The oldest recipe for toothpaste is from ancient Egypt, and dates back to around 5000 BC. The Egyptians made a paste of abrasive substances like salt and sweet-smelling flowers to...",
         "The Nile River: The ancient Egyptians believed the Nile River was a god because it was so important to their everyday life. The Nile is the longest river on Earth, and its mud helped shape human history.",
         "Pyramids: The pyramids were built by paid laborers from far away, not slaves. It took over 100,000 people to build the pyramids.",
         "Afterlife: The ancient Egyptians believed that life on Earth was part of an eternal journey that ended in everlasting joy in the afterlife.",
@@ -16,8 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
     generateFactButton.addEventListener('click', () => {
         const randomIndex = Math.floor(Math.random() * facts.length);
         const selectedFact = facts[randomIndex];
-        const [title, description] = selectedFact.split(':');
+        const colonIndex = selectedFact.indexOf(':');
+        const title = selectedFact.slice(0, colonIndex);
+        const description = selectedFact.slice(colonIndex + 1).trim();
         
-        factDisplay.innerHTML = `<strong>${title}</strong><br>${description.trim()}`;
+        factDisplay.innerHTML = `<strong>${title}</strong><br>${description}`;
     });
 });
